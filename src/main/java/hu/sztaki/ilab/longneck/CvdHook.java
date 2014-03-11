@@ -33,7 +33,7 @@ public class CvdHook implements Hook, ResourceLoaderAware {
     public List<URL> getSchemas() throws IOException {
         List<URL> schemas = new ArrayList<URL>(1);
         schemas.add(resourceLoader.getResource(
-                "classpath:META-INF/schema/longneck-cvd.xsd").getURL());
+                "classpath:META-INF/longneck/schema/longneck-cvd.xsd").getURL());
         
         return schemas;
     }
@@ -42,7 +42,7 @@ public class CvdHook implements Hook, ResourceLoaderAware {
         List<URL> mappings = new ArrayList<URL>(1);
         
         mappings.add(resourceLoader.getResource(
-                "classpath:META-INF/castor/longneck-cvd.mapping.xml").getURL());
+                "classpath:META-INF/longneck/castor/longneck-cvd.mapping.xml").getURL());
         
         return mappings;
     }

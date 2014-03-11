@@ -15,7 +15,7 @@ public class CvdConstraint extends AbstractAtomicConstraint {
     @Override
     public CheckResult check(Record record, VariableSpace scope) {
         // Prepare result variable
-        List<CheckResult> results = new ArrayList<CheckResult>(applyTo.size());
+        List<CheckResult> results = new ArrayList<>(applyTo.size());
 
         for (String fName : applyTo) {
             results.add(new CheckResult(this, false, fName, BlockUtils

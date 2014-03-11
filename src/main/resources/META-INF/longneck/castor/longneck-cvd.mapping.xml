@@ -3,8 +3,8 @@
            xmlns:l="urn:hu.sztaki.ilab.longneck:1.0">
 
   <!-- Cvd -->
-  <c:class name="hu.sztaki.ilab.longneck.process.block.CvdConstraint"
-           extends="hu.sztaki.ilab.longneck.process.AbstractAtomicConstraint">
+  <c:class name="hu.sztaki.ilab.longneck.process.constraint.CvdConstraint"
+           extends="hu.sztaki.ilab.longneck.process.constraint.AbstractAtomicConstraint">
     <c:map-to xml="cvd" ns-uri="urn:hu.sztaki.ilab.longneck:1.0"/>
   </c:class>
 
