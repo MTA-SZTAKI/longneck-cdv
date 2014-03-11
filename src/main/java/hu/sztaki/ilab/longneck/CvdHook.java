@@ -16,7 +16,7 @@ import org.springframework.core.io.ResourceLoader;
 
 /**
  *
- * @author Molnár Péter <molnarp@ilab.sztaki.hu>
+ * @author Geszler Döme <gdome@ilab.sztaki.hu>
  */
 public class CvdHook implements Hook, ResourceLoaderAware {
     

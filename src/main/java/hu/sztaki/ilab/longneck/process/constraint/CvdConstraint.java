@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Molnár Péter <molnarp@ilab.sztaki.hu>
+ * 
+ * @author Geszler Döme <gdome@ilab.sztaki.hu>
  */
 public class CvdConstraint extends AbstractAtomicConstraint {
 
@@ -16,11 +16,12 @@ public class CvdConstraint extends AbstractAtomicConstraint {
     public CheckResult check(Record record, VariableSpace scope) {
         // Prepare result variable
         List<CheckResult> results = new ArrayList<CheckResult>(applyTo.size());
-        
-        for (String fieldName : applyTo) {
-            String s = BlockUtils.getValue(fieldName, record, scope);
+
+        for (String fName : applyTo) {
+            results.add(new CheckResult(this, false, fName, BlockUtils
+                .getValue(fName, record, scope), "Generated an error"));
         }
-        return new CheckResult(this, true, null, null, null, results);
+        return new CheckResult(this, false, null, null, null, results);
     }
 
     @Override

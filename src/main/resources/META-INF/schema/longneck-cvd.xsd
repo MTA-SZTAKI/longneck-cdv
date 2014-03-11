@@ -6,7 +6,7 @@
 
   <xs:complexType name="cvdType">
     <xs:complexContent>
-      <xs:extension base="tns:abstractConstaintType">        
+      <xs:extension base="tns:atomicConstraintType">        
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
