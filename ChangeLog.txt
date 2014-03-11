@@ -1,0 +1,9 @@
+longneck-cli
+
+2012-01-02 1.1.0 Molnár Péter <molnarp@ilab.sztaki.hu> 
+
+    * update: frissítve longneck-core 1.1.0-ra
+
+2012-01-02 1.0.1 Molnár Péter <molnarp@ilab.sztaki.hu> 
+
+    * első változat

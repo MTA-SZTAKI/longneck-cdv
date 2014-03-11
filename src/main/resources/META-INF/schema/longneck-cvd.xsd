@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:tns="urn:hu.sztaki.ilab.longneck:1.0"
+           targetNamespace="urn:hu.sztaki.ilab.longneck:1.0" 
+           elementFormDefault="qualified">
+
+  <xs:complexType name="cvdType">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractConstaintType">        
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="cvd" type="tns:cvdType" substitutionGroup="tns:abstract-constraint"/>
+
+</xs:schema>

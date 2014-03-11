@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<c:mapping xmlns:c="http://castor.exolab.org/"
+           xmlns:l="urn:hu.sztaki.ilab.longneck:1.0">
+
+  <!-- Cvd -->
+  <c:class name="hu.sztaki.ilab.longneck.process.block.CvdConstraint"
+           extends="hu.sztaki.ilab.longneck.process.AbstractAtomicConstraint">
+    <c:map-to xml="cvd" ns-uri="urn:hu.sztaki.ilab.longneck:1.0"/>
+  </c:class>
+
+</c:mapping>
