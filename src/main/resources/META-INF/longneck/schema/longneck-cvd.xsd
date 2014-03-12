@@ -6,7 +6,10 @@
 
   <xs:complexType name="cvdType">
     <xs:complexContent>
-      <xs:extension base="tns:atomicConstraintType">        
+      <xs:extension base="tns:atomicConstraintType">
+        <xs:attributeGroup ref="tns:atomicConstraintAttrGroup"/>
+        <xs:attribute name="coefficients" type="xs:string" use="required"/>
+        <xs:attribute name="mod" type="xs:string" use="required" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
