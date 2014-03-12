@@ -4,12 +4,16 @@
            targetNamespace="urn:hu.sztaki.ilab.longneck:1.0" 
            elementFormDefault="qualified">
 
+  <xs:simpleType name="intlist">
+    <xs:list itemType="xs:integer"/>
+  </xs:simpleType>
+  
   <xs:complexType name="cvdType">
     <xs:complexContent>
       <xs:extension base="tns:atomicConstraintType">
         <xs:attributeGroup ref="tns:atomicConstraintAttrGroup"/>
-        <xs:attribute name="coefficients" type="xs:string" use="required"/>
-        <xs:attribute name="mod" type="xs:string" use="required" />
+        <xs:attribute name="coefficients" type="tns:intlist" use="required"/>
+        <xs:attribute name="mod" type="xs:integer" use="required" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

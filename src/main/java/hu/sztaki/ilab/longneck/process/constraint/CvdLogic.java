@@ -1,30 +1,32 @@
 package hu.sztaki.ilab.longneck.process.constraint;
 
+import java.util.List;
+
 public class CvdLogic {
-    private int[] applyTo;
     private int[] coeffs;
     private int mod;
 
-    private void init(String applyToStr, String coeffStr, String modStr) {
-        mod = Integer.parseInt(modStr);
-        applyTo = new int[applyToStr.length()];
-        for (int i = 0; i < applyToStr.length(); ++i) {
-            applyTo[i] = (int) applyToStr.charAt(i) - 48;
-        }
-        String[] cf = coeffStr.split(";");
-        coeffs = new int[cf.length];
-        for (int i = 0; i < cf.length; ++i) {
-            coeffs[i] = Integer.parseInt(cf[i]);
+    public void setMod(int mod) {
+        this.mod = mod;
+    }
+
+    public void setCoeffs(List<Integer> coeffs) {
+        this.coeffs = new int[coeffs.size()];
+        for (int i = 0; i < coeffs.size(); ++i) {
+            this.coeffs[i] = coeffs.get(i);
         }
     }
 
-    public boolean check(String applyToStr, String coeffStr, String modStr) {
-        init(applyToStr, coeffStr, modStr);
-        if (applyTo.length != coeffs.length)
+    public boolean check(String value) {
+        if (value.length() != coeffs.length)
             return false;
         int checkSum = 0;
-        for (int i = 0; i < coeffs.length; ++i)
-            checkSum += applyTo[i] * coeffs[i];
+        for (int i = 0; i < coeffs.length; ++i) {
+            int digit = (int) value.charAt(i) - 48;
+            if (digit < 0 || digit > 9)
+                return false;
+            checkSum += digit * coeffs[i];
+        }
         checkSum %= mod;
         return (checkSum == 0) ? true : false;
     }

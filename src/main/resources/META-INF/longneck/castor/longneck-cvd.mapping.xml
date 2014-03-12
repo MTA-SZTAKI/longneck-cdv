@@ -7,14 +7,20 @@
            extends="hu.sztaki.ilab.longneck.process.constraint.AbstractAtomicConstraint">
     <c:map-to xml="cvd" ns-uri="urn:hu.sztaki.ilab.longneck:1.0"/>
   	
-  	<c:field name="mod" type="string">
+  	<c:field name="mod" type="int">
       <c:bind-xml name="mod" node="attribute"/>
     </c:field>
 
-    <c:field name="coefficients" type="string">
-      <c:bind-xml name="coefficients" node="attribute"/>
+    <c:field name="coefficients" type="string" set-method="setCoeffs" >
+      <c:bind-xml name="coefficients" node="attribute" />
     </c:field>
 
+
+<!--
+    <c:field name="coefficients" type="java.lang.Integer" collection="arraylist">
+      <c:bind-xml name="coefficients" node="attribute"/>
+    </c:field>
+-->
   </c:class>
 
 </c:mapping>
