@@ -6,5 +6,5 @@
 
   
   <!-- Regexp cache -->
-  <bean id="cvd-hook" class="hu.sztaki.ilab.longneck.CvdHook"/>
+  <bean id="cdv-hook" class="hu.sztaki.ilab.longneck.CdvHook"/>
 </beans>

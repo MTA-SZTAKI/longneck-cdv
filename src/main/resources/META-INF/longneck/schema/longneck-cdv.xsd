@@ -8,7 +8,7 @@
     <xs:list itemType="xs:integer"/>
   </xs:simpleType>
   
-  <xs:complexType name="cvdType">
+  <xs:complexType name="cdvType">
     <xs:complexContent>
       <xs:extension base="tns:atomicConstraintType">
         <xs:attributeGroup ref="tns:atomicConstraintAttrGroup"/>
@@ -18,6 +18,6 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:element name="cvd" type="tns:cvdType" substitutionGroup="tns:abstract-constraint"/>
+  <xs:element name="cdv" type="tns:cdvType" substitutionGroup="tns:abstract-constraint"/>
 
 </xs:schema>

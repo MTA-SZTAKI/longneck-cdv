@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>hu.sztaki.ilab.longneck</groupId>
-  <artifactId>longneck-cvd</artifactId>
+  <artifactId>longneck-cdv</artifactId>
   <version>1.2.0</version>
   <packaging>jar</packaging>
 
-  <name>longneck-cvd</name>
+  <name>longneck-cdv</name>
   <description>
     Longneck package to check validity digit.
   </description>

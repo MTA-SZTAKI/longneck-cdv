@@ -2,10 +2,10 @@
 <c:mapping xmlns:c="http://castor.exolab.org/"
            xmlns:l="urn:hu.sztaki.ilab.longneck:1.0">
 
-  <!-- Cvd constraint -->
-  <c:class name="hu.sztaki.ilab.longneck.process.constraint.CvdConstraint"
+  <!-- Cdv constraint -->
+  <c:class name="hu.sztaki.ilab.longneck.process.constraint.CdvConstraint"
            extends="hu.sztaki.ilab.longneck.process.constraint.AbstractAtomicConstraint">
-    <c:map-to xml="cvd" ns-uri="urn:hu.sztaki.ilab.longneck:1.0"/>
+    <c:map-to xml="cdv" ns-uri="urn:hu.sztaki.ilab.longneck:1.0"/>
   	
   	<c:field name="mod" type="int">
       <c:bind-xml name="mod" node="attribute"/>
@@ -15,12 +15,6 @@
       <c:bind-xml name="coefficients" node="attribute" />
     </c:field>
 
-
-<!--
-    <c:field name="coefficients" type="java.lang.Integer" collection="arraylist">
-      <c:bind-xml name="coefficients" node="attribute"/>
-    </c:field>
--->
   </c:class>
 
 </c:mapping>

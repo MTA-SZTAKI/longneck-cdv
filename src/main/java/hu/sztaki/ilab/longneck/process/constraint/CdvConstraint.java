@@ -11,11 +11,11 @@ import java.util.List;
  * 
  * @author Geszler Döme <gdome@ilab.sztaki.hu>
  */
-public class CvdConstraint extends AbstractAtomicConstraint {
+public class CdvConstraint extends AbstractAtomicConstraint {
 
     private int mod;
     private List<Integer> coefficients;
-    private CvdLogic cvdLogic = new CvdLogic();
+    private CdvLogic cdvLogic = new CdvLogic();
 
     @Override
     public CheckResult check(Record record, VariableSpace scope) {
@@ -25,7 +25,7 @@ public class CvdConstraint extends AbstractAtomicConstraint {
 
         for (String fieldName : applyTo) {
             String value = BlockUtils.getValue(fieldName, record, scope);
-            if (cvdLogic.check(value)) {
+            if (cdvLogic.check(value)) {
                 results.add(new CheckResult(this, true, fieldName, value, details));
             } else {
                 results.add(new CheckResult(this, false, fieldName, value, details));
@@ -36,8 +36,8 @@ public class CvdConstraint extends AbstractAtomicConstraint {
     }
 
     @Override
-    public CvdConstraint clone() {
-        return (CvdConstraint) super.clone();
+    public CdvConstraint clone() {
+        return (CdvConstraint) super.clone();
     }
 
     public int getMod() {
@@ -46,7 +46,7 @@ public class CvdConstraint extends AbstractAtomicConstraint {
 
     public void setMod(int mod) {
         this.mod = mod;
-        cvdLogic.setMod(mod);
+        cdvLogic.setMod(mod);
     }
 
     public List<Integer> getCoefficients() {
@@ -59,12 +59,12 @@ public class CvdConstraint extends AbstractAtomicConstraint {
         for (String element : array) {
             coefficients.add(Integer.parseInt(element));
         }
-        cvdLogic.setCoeffs(coefficients);    
+        cdvLogic.setCoeffs(coefficients);    
     }
 
     public void setCoefficients(List<Integer> coefficients) {
         this.coefficients = coefficients;
-        cvdLogic.setCoeffs(coefficients);
+        cdvLogic.setCoeffs(coefficients);
     }
 
 }

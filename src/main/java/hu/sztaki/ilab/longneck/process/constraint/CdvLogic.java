@@ -2,7 +2,7 @@ package hu.sztaki.ilab.longneck.process.constraint;
 
 import java.util.List;
 
-public class CvdLogic {
+public class CdvLogic {
     private int[] coeffs;
     private int mod;
 

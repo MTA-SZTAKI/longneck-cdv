@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-public class CvdLogicTest {
+public class CdvLogicTest {
 
     @Test
     public void test01() {
-        CvdLogic logic = new CvdLogic();
+        CdvLogic logic = new CdvLogic();
         logic.setMod(10);
         ArrayList<Integer> coeffs = new ArrayList<Integer>();
         coeffs.add(1);
@@ -24,7 +24,7 @@ public class CvdLogicTest {
     }
 
     public void test02() {
-        CvdLogic logic = new CvdLogic();
+        CdvLogic logic = new CdvLogic();
         logic.setMod(11);
         ArrayList<Integer> coeffs = new ArrayList<Integer>();
         for (int i = 1; i <= 11; ++i)
