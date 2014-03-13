@@ -1,24 +1,25 @@
 package hu.sztaki.ilab.longneck.process.constraint;
 
-import java.util.List;
-
 public class CdvLogic {
     private int[] coeffs;
     private int mod;
+    private String cfStr;
 
     public void setMod(int mod) {
         this.mod = mod;
     }
 
-    public void setCoeffs(List<Integer> coeffs) {
-        this.coeffs = new int[coeffs.size()];
-        for (int i = 0; i < coeffs.size(); ++i) {
-            this.coeffs[i] = coeffs.get(i);
+    public void setCoeffs(String cfStr) {
+        this.cfStr = cfStr;
+        String[] strCoeffs = cfStr.split(" ");
+        this.coeffs = new int[strCoeffs.length];
+        for (int i = 0; i < strCoeffs.length; ++i) {
+            this.coeffs[i] = Integer.parseInt(strCoeffs[i]);
         }
     }
 
     public boolean check(String value) {
-        if (value==null)
+        if (value == null)
             return false;
         if (value.length() != coeffs.length)
             return false;
@@ -31,5 +32,10 @@ public class CdvLogic {
         }
         checkSum %= mod;
         return (checkSum == 0) ? true : false;
+    }
+
+    @Override
+    public String toString() {
+        return cfStr + " mod=" + mod;
     }
 }

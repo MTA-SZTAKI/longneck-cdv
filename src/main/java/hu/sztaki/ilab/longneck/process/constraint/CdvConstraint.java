@@ -14,14 +14,14 @@ import java.util.List;
 public class CdvConstraint extends AbstractAtomicConstraint {
 
     private int mod;
-    private List<Integer> coefficients;
+    private String coefficients;
     private CdvLogic cdvLogic = new CdvLogic();
 
     @Override
     public CheckResult check(Record record, VariableSpace scope) {
         // Prepare result variable
         List<CheckResult> results = new ArrayList<>(applyTo.size());
-        String details = "";
+        String details = "CheckDigit not valid." + cdvLogic.toString();
 
         for (String fieldName : applyTo) {
             String value = BlockUtils.getValue(fieldName, record, scope);
@@ -49,20 +49,11 @@ public class CdvConstraint extends AbstractAtomicConstraint {
         cdvLogic.setMod(mod);
     }
 
-    public List<Integer> getCoefficients() {
+    public String getCoefficients() {
         return coefficients;
     }
 
-    public void setCoeffs(String str) {
-        String[] array = str.split(" ");
-        coefficients= new ArrayList<>();
-        for (String element : array) {
-            coefficients.add(Integer.parseInt(element));
-        }
-        cdvLogic.setCoeffs(coefficients);    
-    }
-
-    public void setCoefficients(List<Integer> coefficients) {
+    public void setCoefficients(String coefficients) {
         this.coefficients = coefficients;
         cdvLogic.setCoeffs(coefficients);
     }
