@@ -18,6 +18,8 @@ public class CdvLogic {
     }
 
     public boolean check(String value) {
+        if (value==null)
+            return false;
         if (value.length() != coeffs.length)
             return false;
         int checkSum = 0;
