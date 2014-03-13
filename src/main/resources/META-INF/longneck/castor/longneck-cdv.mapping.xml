@@ -11,7 +11,7 @@
       <c:bind-xml name="mod" node="attribute"/>
     </c:field>
 
-    <c:field name="coefficients" type="string" set-method="setCoeffs" >
+    <c:field name="coefficients" type="string" >
       <c:bind-xml name="coefficients" node="attribute" />
     </c:field>
 

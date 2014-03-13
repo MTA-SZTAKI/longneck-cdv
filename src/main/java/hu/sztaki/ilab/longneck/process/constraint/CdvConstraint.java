@@ -29,10 +29,10 @@ public class CdvConstraint extends AbstractAtomicConstraint {
                 results.add(new CheckResult(this, true, fieldName, value, details));
             } else {
                 results.add(new CheckResult(this, false, fieldName, value, details));
-                return new CheckResult(this, false, null, null, null, results);
+                return new CheckResult(this, false, null, null, details, results);
             }
         }
-        return new CheckResult(this, true, null, null, null, results);
+        return new CheckResult(this, true, null, null, details, results);
     }
 
     @Override

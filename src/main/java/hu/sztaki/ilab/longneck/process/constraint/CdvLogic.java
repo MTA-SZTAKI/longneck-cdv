@@ -36,6 +36,6 @@ public class CdvLogic {
 
     @Override
     public String toString() {
-        return cfStr + " mod=" + mod;
+        return "coeffs=" + cfStr + " mod=" + mod;
     }
 }
